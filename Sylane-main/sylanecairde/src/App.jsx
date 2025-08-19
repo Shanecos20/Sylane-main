@@ -2,33 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import './index.css';
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const cursorRef = useRef(null);
   const headerRef = useRef(null);
   const navRef = useRef(null);
   const mobileToggleRef = useRef(null);
-  const testimonialSliderRef = useRef(null);
   const [animated, setAnimated] = useState(false);
   const [accordionOpen, setAccordionOpen] = useState(false);
-  
-  // Define testimonials data
-  const testimonials = [
-    {
-      quote: "Being part of Sylane's Cairde program has been incredibly rewarding. It's great to see the direct impact our contributions are making on the club's facilities and youth development programs. The sense of community is wonderful!",
-      name: "Michael O'Connor",
-      role: "Monthly subscriber since 2023"
-    },
-    {
-      quote: "Joining Sylane Cairde has connected me with a fantastic community of hurling enthusiasts. The membership benefits are excellent, but knowing we're helping build a stronger future for the club is the real reward.",
-      name: "Sarah Brennan",
-      role: "Yearly subscriber since 2024"
-    },
-    {
-      quote: "As someone who grew up playing with Sylane, it's incredible to see how the Cairde initiative is transforming our facilities. The progress tracker keeps us all motivated and it's great to see our community coming together for the club we love.",
-      name: "Seamus Kelly",
-      role: "Weekly subscriber since 2022"
-    }
-  ];
 
   useEffect(() => {
     // Custom cursor
@@ -96,16 +75,7 @@ function App() {
     }
   };
 
-  // Testimonial slider functions
-  const showSlide = (index) => {
-    let newIndex = index;
-    if (index < 0) {
-      newIndex = testimonials.length - 1;
-    } else if (index >= testimonials.length) {
-      newIndex = 0;
-    }
-    setCurrentSlide(newIndex);
-  };
+
 
   // Animate numbers
   const animateNumber = (el, target) => {
@@ -158,14 +128,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [animated]);
   
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      showSlide(currentSlide + 1);
-    }, 8000);
-    
-    return () => clearInterval(interval);
-  }, [currentSlide]);
+
 
   // Toggle accordion
   const toggleAccordion = () => {
@@ -196,7 +159,7 @@ function App() {
             <a href="#about" className="nav-link" onClick={(e) => handleSmoothScroll(e, '#about')}>About</a>
             <a href="#tiers" className="nav-link" onClick={(e) => handleSmoothScroll(e, '#tiers')}>Membership</a>
             <a href="#timeline" className="nav-link" onClick={(e) => handleSmoothScroll(e, '#timeline')}>Timeline</a>
-            <a href="#testimonials" className="nav-link" onClick={(e) => handleSmoothScroll(e, '#testimonials')}>Testimonials</a>
+
             <a href="#" className="cta-button">Join Now</a>
           </nav>
         </div>
@@ -545,47 +508,7 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="section testimonials">
-        <div className="container">
-          <h2 className="section-title">What Our Members Say</h2>
-          <div className="testimonials-container">
-            <div className="testimonial-slider" ref={testimonialSliderRef}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className={`testimonial-slide ${index === currentSlide ? 'active' : ''}`}>
-                  <p className="testimonial-quote">{testimonial.quote}</p>
-                  <div className="testimonial-author">
-                    <div className="testimonial-avatar">
-                      <img src="https://emedia1.nhs.wales/HEIW2/cache/file/F4C33EF0-69EE-4445-94018B01ADCF6FD4.png" alt="Testimonial avatar" />
-                    </div>
-                    <div className="testimonial-info">
-                      <div className="testimonial-name">{testimonial.name}</div>
-                      <div className="testimonial-role">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="testimonial-controls">
-              <button className="testimonial-button prev-button" onClick={() => showSlide(currentSlide - 1)}>
-                <i className="fas fa-arrow-left"></i>
-              </button>
-              <button className="testimonial-button next-button" onClick={() => showSlide(currentSlide + 1)}>
-                <i className="fas fa-arrow-right"></i>
-              </button>
-            </div>
-            <div className="testimonial-indicator">
-              {testimonials.map((_, index) => (
-                <div 
-                  key={index} 
-                  className={`indicator-dot ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => showSlide(index)}
-                ></div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Call to Action */}
       <section className="section cta-section">
@@ -622,7 +545,7 @@ function App() {
                 <li><a href="#about" className="footer-nav-link" onClick={(e) => handleSmoothScroll(e, '#about')}>About</a></li>
                 <li><a href="#tiers" className="footer-nav-link" onClick={(e) => handleSmoothScroll(e, '#tiers')}>Membership</a></li>
                 <li><a href="#timeline" className="footer-nav-link" onClick={(e) => handleSmoothScroll(e, '#timeline')}>Timeline</a></li>
-                <li><a href="#testimonials" className="footer-nav-link" onClick={(e) => handleSmoothScroll(e, '#testimonials')}>Testimonials</a></li>
+
               </ul>
             </div>
             <div className="footer-nav">
