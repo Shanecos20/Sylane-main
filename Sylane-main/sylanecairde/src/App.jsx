@@ -232,7 +232,7 @@ function App() {
               </div>
               <div className="about-stats">
                 <div className="stat-item">
-                  <div className="stat-number" data-count="50">50+</div>
+                  <div className="stat-number" data-count="40">40+</div>
                   <div className="stat-label">Years of History</div>
                 </div>
                 <div className="stat-item">
