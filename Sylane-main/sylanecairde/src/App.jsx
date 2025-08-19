@@ -188,6 +188,41 @@ function App() {
         </div>
       </section>
 
+      {/* Introduction Section */}
+      <section className="introduction-section">
+        <div className="container">
+          <div className="introduction-content">
+            <div className="introduction-text">
+              <h2 className="introduction-title">Our Story</h2>
+              <p className="introduction-paragraph">
+                Founded in 1984, Sylane Hurling Club has grown from humble beginnings into a thriving hub for hurling in North Galway. 
+                Based in the parish of Sylaun, near Tuam, the club quickly rose through the ranks by winning Junior county titles in the 
+                late 1980s and early 1990s. Building on that early success, Sylane went on to claim three Connacht Junior Club Hurling 
+                Championships (2007, 2015, 2017) before stepping up to Intermediate level in 2017.
+              </p>
+              <p className="introduction-paragraph">
+                The club has continued to make history with strong performances in county competitions, underpinned by a commitment to 
+                player development and community involvement. A major milestone was reached in 2022 with the completion of a new clubhouse 
+                development, featuring modern dressing rooms, gym, physio and meeting facilities—providing the resources to support players 
+                at every level.
+              </p>
+              <p className="introduction-paragraph">
+                Today, Sylane Hurling Club stands as a proud and ambitious organisation, combining competitive spirit with deep community 
+                roots, while working to inspire and nurture the next generation of hurlers.
+              </p>
+            </div>
+            <div className="introduction-video">
+              <div className="video-embed">
+                <video controls className="club-video">
+                  <source src="/Sylane Hurling & Camogie Club ｜ my3D.ie Architectural Visualisation Ireland [-bND538VPfY].mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="section">
         <div className="container">
@@ -414,19 +449,6 @@ function App() {
        <section id="timeline" className="section timeline-section">
          <div className="container">
            <h2 className="section-title">Redevelopment Progress</h2>
-           <div className="timeline-intro">
-             <p className="timeline-intro-text">
-               Founded in 1984, Sylane Hurling Club has grown from humble beginnings into a thriving hub for hurling in North Galway. 
-               Based in the parish of Sylaun, near Tuam, the club quickly rose through the ranks by winning Junior county titles in the 
-               late 1980s and early 1990s. Building on that early success, Sylane went on to claim three Connacht Junior Club Hurling 
-               Championships (2007, 2015, 2017) before stepping up to Intermediate level in 2017. The club has continued to make history 
-               with strong performances in county competitions, underpinned by a commitment to player development and community involvement. 
-               A major milestone was reached in 2022 with the completion of a new clubhouse development, featuring modern dressing rooms, 
-               gym, physio and meeting facilities—providing the resources to support players at every level. Today, Sylane Hurling Club 
-               stands as a proud and ambitious organisation, combining competitive spirit with deep community roots, while working to 
-               inspire and nurture the next generation of hurlers.
-             </p>
-           </div>
            <p className="timeline-description">Follow our journey as we transform Sylane Hurling Club with state-of-the-art facilities and improvements for our community.</p>
           
           <div className="timeline-container">
@@ -505,18 +527,6 @@ function App() {
               </div>
             </div>
           </div>
-
-                     {/* Video Section */}
-           <div className="timeline-video-section">
-             <h3 className="video-section-title">Watch Our Progress</h3>
-             <p className="video-section-description">See the transformation of Sylane Hurling Club through our development journey.</p>
-             <div className="video-embed">
-               <video controls className="timeline-video">
-                 <source src="/Sylane Hurling & Camogie Club ｜ my3D.ie Architectural Visualisation Ireland [-bND538VPfY].mp4" type="video/mp4" />
-                 Your browser does not support the video tag.
-               </video>
-             </div>
-           </div>
         </div>
       </section>
 
