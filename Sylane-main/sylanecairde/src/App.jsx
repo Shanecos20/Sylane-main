@@ -193,7 +193,7 @@ function App() {
         <div className="container">
           <div className="introduction-content">
             <div className="introduction-text">
-              <h2 className="introduction-title">Our Story</h2>
+              <h2 className="section-title">Our Story</h2>
               <p className="introduction-paragraph">
                 Founded in 1984, Sylane Hurling Club has grown from humble beginnings into a thriving hub for hurling in North Galway. 
                 Based in the parish of Sylaun, near Tuam, the club quickly rose through the ranks by winning Junior county titles in the 
@@ -213,7 +213,7 @@ function App() {
             </div>
             <div className="introduction-video">
               <div className="video-embed">
-                <video controls className="club-video">
+                <video controls className="club-video" poster="/newclub.jpg">
                   <source src="/Sylane Hurling & Camogie Club ｜ my3D.ie Architectural Visualisation Ireland [-bND538VPfY].mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -530,7 +530,19 @@ function App() {
         </div>
       </section>
 
-
+      {/* Progress Video Section */}
+      <section className="progress-video-section">
+        <div className="container">
+          <div className="progress-video-content">
+            <div className="video-embed">
+              <video controls className="progress-video" poster="/newclub.jpg">
+                <source src="/Sylane Hurling & Camogie Club ｜ my3D.ie Architectural Visualisation Ireland [-bND538VPfY].mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="section cta-section">

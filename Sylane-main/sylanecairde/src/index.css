@@ -443,16 +443,7 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link, .cta-button, .secondary-button, .tier-
   z-index: 1;
 }
 
-.introduction-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, var(--dark) 0%, var(--gray) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+
 
 .introduction-paragraph {
   font-size: 1.1rem;
@@ -488,10 +479,7 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link, .cta-button, .secondary-button, .tier-
     gap: 3rem;
   }
   
-  .introduction-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
+
   
   .introduction-paragraph {
     text-align: left;
@@ -503,13 +491,70 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link, .cta-button, .secondary-button, .tier-
     padding: 4rem 0;
   }
   
-  .introduction-title {
-    font-size: 2rem;
-  }
+
   
   .introduction-paragraph {
     font-size: 1rem;
     line-height: 1.7;
+  }
+}
+
+/* Progress Video Section */
+.progress-video-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 50%, #f8f9fa 100%);
+  position: relative;
+}
+
+.progress-video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 204, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 204, 0, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.progress-video-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-video-content .video-embed {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+  background: var(--light);
+  border: 1px solid rgba(255, 204, 0, 0.1);
+}
+
+.progress-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Responsive for Progress Video Section */
+@media (max-width: 768px) {
+  .progress-video-section {
+    padding: 4rem 0;
+  }
+  
+  .progress-video-content .video-embed {
+    margin: 0 1rem;
+    border-radius: 16px;
+  }
+  
+  .progress-video {
+    border-radius: 16px;
   }
 }
 
