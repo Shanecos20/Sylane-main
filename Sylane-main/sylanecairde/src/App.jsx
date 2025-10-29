@@ -143,9 +143,7 @@ function App() {
       <header className="header" ref={headerRef}>
         <div className="container header-inner">
           <a href="#" className="logo">
-            <svg className="logo-icon" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 5C16.2 5 5 16.2 5 30C5 43.8 16.2 55 30 55C43.8 55 55 43.8 55 30C55 16.2 43.8 5 30 5ZM38 40L30 35.5L22 40V20H38V40Z" fill="#FFCC00"/>
-            </svg>
+            <img src="/sylanelogo.png" alt="Sylane Hurling Club" className="logo-icon" width="40" height="40" />
             <span>SYLANE CAIRDE</span>
           </a>
           
